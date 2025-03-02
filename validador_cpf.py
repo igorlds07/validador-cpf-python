@@ -44,7 +44,7 @@ while True:
     soma_digito2 = 0
     
     # Laço para percorrer até o primeiro digíto
-    for item in cpf_formatado[:10] + str(primeiro_digito):
+    for item in cpf_formatado[:9] + str(primeiro_digito):
         soma_digito2 += int(item) * cont2  # Soma a multiplicação de cada item pelo contador
         cont2 -= 1  # Diminui o contador a cada iteração
     
