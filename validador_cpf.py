@@ -11,6 +11,14 @@ while True:
     # Retira os espaços e os símbolos do cpf
     cpf_formatado = cpf.replace(".", "").replace("-", "")  
     
+    # Variável para verificar se os dados inseridos são iguais
+    cpf_sequencial = cpf_formatado == cpf_formatado[0] * len(cpf_formatado)
+    
+    # Condição para verificar se cpf_sequencial é verdadeira
+    if cpf_sequencial:
+        print('Você digitou dados sequênciais!')
+        continue
+    
     # Condição para verificar se o cpf contém apenas números, se não for númerico
     # retorna  uma mensagem para o usuáriio
     if not cpf_formatado.isdigit():
